@@ -39,7 +39,7 @@ public class PieGraph extends View {
 	private Path path = new Path();
 	
 	private int indexSelected = -1;
-	private int thickness = 50;
+	private int thickness = 100;
 	private OnSliceClickedListener listener;
 	
 	
@@ -60,7 +60,7 @@ public class PieGraph extends View {
 		float currentAngle = 270;
         float currentSweep;
         int totalValue = 0;
-		float padding = 2;
+		float padding = 5;
 		
 		midX = getWidth()/2;
 		midY = getHeight()/2;
@@ -69,7 +69,7 @@ public class PieGraph extends View {
 		} else {
 			radius = midY;
 		}
-		radius -= padding;
+		radius -= 200 - padding;
 		innerRadius = radius - thickness;
 		
 		for (PieSlice slice : slices){
